@@ -9,5 +9,17 @@ $('.spoiler').append("<button>Reveal Spoiler</button>");
 // jquery api: .append(content[,content1])
 
 // 3 When button is pressed,
-//   3.1 show spoiler
-//   3.2 get rid of button
+
+$('button').click(function() {
+  //   3.1 show spoiler
+  // $('.spoiler span').show();
+
+  //Better to treverse the dom
+  // .prev() Get the immediately preceding element. Opposite of .next()
+  // SHow the spoiler next to the button clicked
+  $(this).prev().show();
+
+  //   3.2 get rid of button
+  $(this).remove();
+  // here we can use this instead if 'button'
+});
